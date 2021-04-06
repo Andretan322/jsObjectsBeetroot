@@ -1,9 +1,9 @@
 `use strict`;
 
 const time = {
-    hours,
-    minutes,
-    seconds,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
 
     modify(hours, minutes, seconds) {
         this.hours = hours;
