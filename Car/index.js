@@ -25,6 +25,13 @@ const getInfo = (car) => {
     alert(message);
 }
 
+const getTime = (car) => {
+    const askDistance = +prompt(`How many kilometers do you want to ride?`);
+    const time = (askDistance/car.speed);
+    const timeToRest = time/4;
+
+    alert(`You need: ${Math.round(time + timeToRest)} hours`)
+}
 
 const audi = createCar();
 getInfo(audi);
