@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="Rectangle/index.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="createRectangle()">Create Rectangle</button>
+
+    <button onclick="getRectanglePoints()">Describe Rectangle Points</button>
+
+    <button
+      onclick="alert(`The width of rectangle is: ${getRectangleWidth()}`);"
+    >
+      Rectangle Width
+    </button>
+
+    <button
+      onclick="alert(`The height of rectangle is: ${getRectangleHeight()}`);"
+    >
+      Rectangle Height
+    </button>
+
+    <button onclick="alert(`The area of rectangle is: ${getRectangleArea()}`);">
+      Rectangle Area
+    </button>
+
+    <button
+      onclick="alert(`The perimeter of rectangle is: ${getRectanglePerimeter()}`);"
+    >
+      Rectangle Perimeter
+    </button>
+
+    <button onclick="changeRectangleWidth()">Change Rectangle Width</button>
+
+    <button onclick="changeRectangleHeight()">Change Rectangle Height</button>
+
+    <button onclick="moveRectangleX()">Move Rectangle by X</button>
+
+    <button onclick="moveRectangleY()">Move Rectangle by Y</button>
+
+    <button onclick="isInsideRectangle()">Point in Rectangle</button>
+  </body>
+</html>
