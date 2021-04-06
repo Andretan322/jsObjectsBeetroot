@@ -33,6 +33,3 @@ const getTime = (car) => {
     alert(`You need: ${Math.round(time + timeToRest)} hours`)
 }
 
-const audi = createCar();
-getInfo(audi);
-
