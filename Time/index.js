@@ -20,7 +20,7 @@ const setTime = () => {
     time.modify(hours, minutes, seconds);
 }
 
-const getTime = () => {
+const showTime = () => {
     const createTime = new Date(0, 0, 0, time.hours, time.minutes, time.seconds);
     const message = `Time: ${createTime.getHours()}:${createTime.getMinutes()}:${createTime.getSeconds()}`;
     alert(message);
