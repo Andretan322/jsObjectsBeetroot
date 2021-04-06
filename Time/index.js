@@ -10,6 +10,18 @@ const time = {
         this.minutes = minutes;
         this.seconds = seconds;
     },
+
+    addSeconds(seconds) {
+        this.seconds += seconds;
+    },
+
+    addMinutes(minutes) {
+        this.minutes += minutes;
+    },
+
+    addHours(hours) {
+        this.hours += hours;
+    },
 };
 
 const setTime = () => {
@@ -18,12 +30,37 @@ const setTime = () => {
     const seconds = +prompt(`Seconds`);
 
     time.modify(hours, minutes, seconds);
-}
+};
 
 const showTime = () => {
-    const createTime = new Date(0, 0, 0, time.hours, time.minutes, time.seconds);
-    const message = `Time: ${createTime.getHours()}:${createTime.getMinutes()}:${createTime.getSeconds()}`;
+    const date = new Date(0, 0, 0, time.hours, time.minutes, time.seconds);
+    const message = `Time: ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
     alert(message);
-}
+};
+
+const addSeconds = () => {
+    const askSeconds = +prompt(`Seconds`);
+
+    time.addSeconds(askSeconds);
+    showTime();
+};
+
+const addMinutes = () => {
+    const askMinutes = +prompt(`Minutes`);
+
+    time.addMinutes(askMinutes);
+    showTime();
+};
+
+const addHours = () => {
+    const askHours = +prompt(`Hours`);
+
+    time.addHours(askHours);
+    showTime();
+};
+
+
+
+
 
 
