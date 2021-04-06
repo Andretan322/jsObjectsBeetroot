@@ -1,14 +1,29 @@
 `use strict`;
 
-const askTime = () => {
-    const time = prompt(`Enter the time\nExample: 00:00:00`);
-    return(time.split(`:`));
+const time = {
+    hours,
+    minutes,
+    seconds,
+
+    modify(hours, minutes, seconds) {
+        this.hours = hours;
+        this.minutes = minutes;
+        this.seconds = seconds;
+    },
+};
+
+const setTime = () => {
+    const hours = +prompt(`Hours`);
+    const minutes = +prompt(`Minutes`);
+    const seconds = +prompt(`Seconds`);
+
+    time.modify(hours, minutes, seconds);
 }
 
-const createTime = () => {
-    const arrTime = askTime();
-    checkTime(arrTime);
-    const time = new Date(0, 0, 0, arrTime[0], arrTime[1], arrTime[2]);
-
-    alert(`Time: ${time.getHours()}:${time.getMinutes()}:${time.getSeconds()}`);
+const getTime = () => {
+    const createTime = new Date(0, 0, 0, time.hours, time.minutes, time.seconds);
+    const message = `Time: ${createTime.getHours()}:${createTime.getMinutes()}:${createTime.getSeconds()}`;
+    alert(message);
 }
+
+
