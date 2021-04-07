@@ -56,3 +56,10 @@ const getSumFractions = () => {
     const fractionCopy = checkFractions();
     alert(`The sum is ${fractionCopy.upOne + fractionCopy.upTwo}/${fractionCopy.downOne}`);
 };
+
+const getDifferenceFractions = () => {
+    const fractionCopy = checkFractions();
+    alert(`The difference is ${fractionCopy.upOne - fractionCopy.upTwo}/${fractionCopy.downOne}`);
+};
+
+
