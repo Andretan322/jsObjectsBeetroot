@@ -51,3 +51,7 @@ const checkFractions = () => {
     }
 };
 
+const sumFractions = () => {
+    checkFractions();
+    alert(`The sum is ${fraction.upOne + fraction.upTwo}/${fraction.downOne}`);
+};
