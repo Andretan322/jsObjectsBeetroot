@@ -37,21 +37,22 @@ const getNOK = (n, m) => {
     return n * m / gcd(n, m);
 }
 
-const setNumerators = (nok) => {
+const setNumerators = (nok, fraction) => {
     fraction.upOne *= nok / fraction.downOne;
     fraction.upTwo *= nok / fraction.downTwo;
 };
 
 const checkFractions = () => {
-    let nok = 0;
-    if (fraction.downOne != fraction.downTwo) {
-        nok = getNOK(fraction.downOne, fraction.downTwo);
-        setNumerators(nok);
-        fraction.nok(nok);
+    const fractionCopy = Object.assign({}, fraction);
+    if (fractionCopy.downOne != fractionCopy.downTwo) {
+        const nok = getNOK(fractionCopy.downOne, fractionCopy.downTwo);
+        setNumerators(nok, fractionCopy);
+        fractionCopy.nok(nok);
     }
+    return fractionCopy;
 };
 
-const sumFractions = () => {
-    checkFractions();
-    alert(`The sum is ${fraction.upOne + fraction.upTwo}/${fraction.downOne}`);
+const getSumFractions = () => {
+    const fractionCopy = checkFractions();
+    alert(`The sum is ${fractionCopy.upOne + fractionCopy.upTwo}/${fractionCopy.downOne}`);
 };
