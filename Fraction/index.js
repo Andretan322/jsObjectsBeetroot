@@ -29,3 +29,25 @@ const createFractions = () => {
     alert(`First fraction: ${upOne}/${downOne}\nSecond fraction: ${upTwo}/${downTwo}`);
 };
 
+const gcd = (n, m) => {
+    return m == 0 ? n : gcd(m, n % m);
+}
+
+const getNOK = (n, m) => {
+    return n * m / gcd(n, m);
+}
+
+const setNumerators = (nok) => {
+    fraction.upOne *= nok / fraction.downOne;
+    fraction.upTwo *= nok / fraction.downTwo;
+};
+
+const checkFractions = () => {
+    let nok = 0;
+    if (fraction.downOne != fraction.downTwo) {
+        nok = getNOK(fraction.downOne, fraction.downTwo);
+        setNumerators(nok);
+        fraction.nok(nok);
+    }
+};
+
