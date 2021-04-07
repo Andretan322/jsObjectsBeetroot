@@ -52,6 +52,8 @@ const checkFractions = () => {
     return fractionCopy;
 };
 
+// create function, that check fraction (0, 1)
+
 const getSumFractions = () => {
     const fractionCopy = checkFractions();
     alert(`The sum is ${fractionCopy.upOne + fractionCopy.upTwo}/${fractionCopy.downOne}`);
@@ -62,4 +64,12 @@ const getDifferenceFractions = () => {
     alert(`The difference is ${fractionCopy.upOne - fractionCopy.upTwo}/${fractionCopy.downOne}`);
 };
 
+const getMultipleFractions = () => {
+    const fractionCopy = Object.assign({}, fraction);
+    alert(`The multiple is ${fractionCopy.upOne * fractionCopy.upTwo}/${fractionCopy.downOne * fractionCopy.downTwo}`);
+}
 
+const getDivisionFractions = () => {
+    const fractionCopy = Object.assign({}, fraction);
+    alert(`The division is ${fractionCopy.upOne * fractionCopy.downTwo}/${fractionCopy.downOne * fractionCopy.upTwo}`);
+}
