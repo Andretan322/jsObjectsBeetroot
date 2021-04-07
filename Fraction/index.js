@@ -19,3 +19,13 @@ const fraction = {
     },
 };
 
+const createFractions = () => {
+    const upOne = +prompt(`First numerator`);
+    const downOne = +prompt(`First divider`);
+    const upTwo = +prompt(`Second numerator`);
+    const downTwo = +prompt(`Second divider`);
+
+    fraction.modify(upOne, downOne, upTwo, downTwo);
+    alert(`First fraction: ${upOne}/${downOne}\nSecond fraction: ${upTwo}/${downTwo}`);
+};
+
